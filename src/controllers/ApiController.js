@@ -109,6 +109,7 @@ module.exports = {
           attackerSkill: null,
           defenderSkill: null,
         };
+        onlineChallenges[challengeId] = newChallenge;
 
         io.to(opponentId).emit('sendChallenge', {
           challengeId: challengeId,
